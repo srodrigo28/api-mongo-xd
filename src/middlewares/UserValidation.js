@@ -7,12 +7,6 @@ const UserValidation = async(req, res, next) => {
     }else{ 
         next();
     }
-    if(!email){ return res.status(400).json({error: 'Não posso gravar sem o email'})
-    }else{ 
-        next();
-    }
-    if(!senha){ return res.status(400).json({error: 'Não posso gravar sem o senha'})
-    }else{ 
-        next();
-    }
 }
+
+module.exports = UserValidation;
