@@ -13,14 +13,12 @@ const TaskSchema = new Schema({
 })
 
 module.exports = mongoose.model('Task', TaskSchema);
-
-// mongodb+srv://rodrigoexer1:2gDvCeKENORJmDxp@cluster0.2ilevle.mongodb.net/
 /**
- {
+  {
 	 "macaddress": "00:1B:44:11:3A:B7 ",
 	 "type": 1,
      "title": "Task",
-	 "description": " Em fim programando muito",
-	 "when": "2020-12-17T14:30:00:000"
+	 "description": " Feriado programando muito",
+	 "when": "2023-06-08T16:09:25.557+00:00"
  }
  */
