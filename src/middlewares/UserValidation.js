@@ -1,4 +1,3 @@
-const UserModel = require('../model/UserModel')
 
 const UserValidation = async(req, res, next) => {
     const { nome, email, senha } = req.body;
