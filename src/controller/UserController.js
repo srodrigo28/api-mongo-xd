@@ -1,10 +1,10 @@
-const TaskModel = require('../model/TaskModel');
+const UserModel = require('../model/UserModel');
 
-class TaskController{
+class UserController{
     async create(req, res){
-        const task = new TaskModel(req.body);
+        const user = new UserModel(req.body);
 
-        await task
+        await user
             .save()
             .then( response => {
                 return res.status(200).json(response);
@@ -15,4 +15,4 @@ class TaskController{
     }
 }
 
-module.exports = new TaskController();
+module.exports = new UserController();
