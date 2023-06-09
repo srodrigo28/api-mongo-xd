@@ -6,10 +6,14 @@ const TaskController = require('../controller/TaskController');
 const MacaddressValidation = require('../middlewares/MacaddressValidation');
 
 router.post('/', TaskController.create)
-router.get('/:id', TaskController.show)
+
 router.put('/:id', TaskController.update)
 router.delete('/:id', TaskController.delete)
 router.put('/:id/:done', TaskController.done)
+
+router.get('/:id', TaskController.show)
 router.get('/filter/all', MacaddressValidation, TaskController.all)
+router.get('/filter/late', MacaddressValidation, TaskController.late)
+router.get('/filter/today', MacaddressValidation, TaskController.today)
 
 module.exports = router;
