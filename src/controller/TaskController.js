@@ -37,8 +37,6 @@ class TaskController{
             .then(response => {
                 if(response)
                     return res.status(200).json(response);
-                else
-                    return res.status(404).json({ error: "Registro não encontrado" });
                 })
             .catch(error => {
                 return res.status(500).json(error)
