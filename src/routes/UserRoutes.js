@@ -6,6 +6,6 @@ const UserValidation = require('../middlewares/UserValidation');
 const { route } = require('./TaskRoutes');
 
 router.post('/', UserValidation, UserController.create)
-// route.get('/', UserController.all)
+router.get('/', UserController.all)
 
 module.exports = router;
