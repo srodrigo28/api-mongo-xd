@@ -13,6 +13,15 @@ class UserController{
              return res.status(500).json(error);
             })
     }
+    async all(_, res) {
+        await UserModel.find()
+        .then(response => {
+            return res.status(200).json(response);
+        })
+        .catch(error => {
+            return res.status(500).json(error);
+        })
+    }
 }
 
 module.exports = new UserController();
