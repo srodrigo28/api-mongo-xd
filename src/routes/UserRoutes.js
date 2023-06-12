@@ -7,6 +7,8 @@ const { route } = require('./TaskRoutes');
 
 router.post('/', UserValidation, UserController.create)
 router.delete('/:id', UserController.delete)
+
+router.get('/:id', UserController.allById)
 router.get('/', UserController.all)
 
 // router.get('/filter/week/:macaddress', TaskController.week)
