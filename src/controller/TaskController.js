@@ -118,6 +118,7 @@ class TaskController{
                 return res.status(500).json(error)
             })
     }
+    
     async month(req, res) {
         await TaskModel
             .find({

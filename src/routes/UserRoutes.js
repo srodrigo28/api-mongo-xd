@@ -6,12 +6,11 @@ const UserValidation = require('../middlewares/UserValidation');
 const { route } = require('./TaskRoutes');
 
 router.post('/', UserValidation, UserController.create)
+
+router.get('/', UserController.all)
+router.put('/:id', UserController.update)
+router.get('/:id', UserController.allById)
 router.delete('/:id', UserController.delete)
 
-router.get('/:id', UserController.allById)
-router.get('/', UserController.all)
-
-// router.get('/filter/week/:macaddress', TaskController.week)
-// router.get('/filter/month/:macaddress', TaskController.month)
 
 module.exports = router;

@@ -4,7 +4,7 @@ const ContaValidation = async(req, res, next) => {
     if(!descricao){
         return res.status(400).json({error: 'Descrição é Obrigatória'})
     } else if(!valor){
-         return res.status(400).json({error: 'Valor é Obrigatória'})
+        return res.status(400).json({ error: 'Valor é Obrigatória' })
     }else{
         next();
     }
